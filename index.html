@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sonora — Music Classes</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: "#F8F3EA",
+            dark: "#171512",
+            coral: "#FF7357",
+            gold: "#E9B949",
+            sage: "#879D83"
+          },
+
+          fontFamily: {
+            display: ["Georgia", "serif"],
+            sans: ["Inter", "Arial", "sans-serif"]
+          },
+
+          boxShadow: {
+            soft: "0 20px 60px rgba(0,0,0,0.12)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .music-note {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(8deg);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(-5deg);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-cream text-dark font-sans">
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="absolute top-0 left-0 w-full z-50">
+
+    <nav class="max-w-7xl mx-auto px-6 lg:px-10 py-6
+                flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+
+        <div class="w-11 h-11 rounded-full bg-dark text-white
+                    flex items-center justify-center
+                    font-bold text-lg">
+          S
+        </div>
+
+        <span class="text-xl font-bold">
+          sonora<span class="text-coral">.</span>
+        </span>
+
+      </a>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+        <a href="#classes" class="hover:text-coral transition">
+          Classes
+        </a>
+
+        <a href="#teachers" class="hover:text-coral transition">
+          Teachers
+        </a>
+
+        <a href="#about" class="hover:text-coral transition">
+          About
+        </a>
+
+        <a href="#contact" class="hover:text-coral transition">
+          Contact
+        </a>
+
+      </div>
+
+      <!-- CTA -->
+      <a
+        href="#contact"
+        class="bg-dark text-white px-5 py-3
+               rounded-full text-sm font-semibold
+               hover:bg-coral transition">
+        Book a Class
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="min-h-screen relative overflow-hidden pt-36 pb-20 px-6">
+
+    <!-- Background circles -->
+
+    <div class="absolute -top-32 -right-32
+                w-96 h-96 bg-gold/30
+                rounded-full blur-3xl">
+    </div>
+
+    <div class="absolute bottom-0 left-1/3
+                w-80 h-80 bg-coral/10
+                rounded-full blur-3xl">
+    </div>
+
+
+    <div class="max-w-7xl mx-auto
+                grid lg:grid-cols-2
+                gap-16 items-center">
+
+      <!-- LEFT -->
+
+      <div class="relative z-10">
+
+        <div class="inline-flex items-center gap-2
+                    bg-white/70 border border-black/10
+                    px-4 py-2 rounded-full
+                    text-xs uppercase tracking-widest font-bold">
+
+          <span class="w-2 h-2 bg-coral rounded-full"></span>
+
+          Learn • Play • Create
+
+        </div>
+
+
+        <h1 class="font-display
+                   text-6xl sm:text-7xl lg:text-[7rem]
+                   leading-[0.9]
+                   tracking-tight
+                   mt-8">
+
+          Find your
+
+          <span class="text-coral italic">
+            sound.
+          </span>
+
+        </h1>
+
+
+        <p class="mt-8 max-w-xl
+                  text-lg sm:text-xl
+                  leading-8
+                  text-dark/60">
+
+          Learn music from passionate musicians.
+          Piano, guitar, vocals, drums and more —
+          designed for beginners and experienced
+          musicians alike.
+
+        </p>
+
+
+        <!-- Buttons -->
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+
+          <a
+            href="#classes"
+            class="bg-coral text-white
+                   px-7 py-4 rounded-full
+                   text-center font-bold
+                   hover:-translate-y-1
+                   transition shadow-lg">
+
+            Explore Classes →
+
+          </a>
+
+          <a
+            href="#about"
+            class="border border-dark/20
+                   px-7 py-4 rounded-full
+                   text-center font-bold
+                   hover:bg-white transition">
+
+            Why Sonora?
+
+          </a>
+
+        </div>
+
+
+        <!-- Stats -->
+
+        <div class="flex gap-10 mt-12">
+
+          <div>
+            <h3 class="text-3xl font-bold">
+              4.9
+            </h3>
+
+            <p class="text-sm text-dark/50">
+              Student rating
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-3xl font-bold">
+              1,200+
+            </h3>
+
+            <p class="text-sm text-dark/50">
+              Students taught
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT VISUAL -->
+
+      <div class="relative h-[520px]">
+
+        <!-- Card -->
+
+        <div class="absolute
+                    right-0 top-5
+                    w-[80%] h-[430px]
+                    bg-[#C49A72]
+                    rounded-[3rem]
+                    rotate-3
+                    shadow-soft">
+        </div>
+
+
+        <!-- Guitar-style shape -->
+
+        <div class="absolute
+                    right-10 top-10
+                    w-[75%] h-[430px]
+                    bg-[#9A6847]
+                    rounded-[3rem]
+                    shadow-soft
+                    overflow-hidden">
+
+          <!-- Guitar strings -->
+
+          <div class="absolute
+                      left-1/2 top-16
+                      -translate-x-1/2
+                      w-5 h-72
+                      bg-black/10
+                      rounded-full">
+          </div>
+
+          <div class="absolute
+                      left-1/2 bottom-16
+                      -translate-x-1/2
+                      w-32 h-32
+                      border-[20px]
+                      border-black/10
+                      rounded-full">
+          </div>
+
+        </div>
+
+
+        <!-- Floating note -->
+
+        <div class="music-note
+                    absolute right-0 top-24
+                    w-20 h-20
+                    rounded-full
+                    bg-coral
+                    text-white
+                    text-4xl
+                    flex items-center justify-center
+                    shadow-xl">
+
+          ♪
+
+        </div>
+
+
+        <!-- Black quote card -->
+
+        <div class="absolute
+                    left-0 bottom-0
+                    bg-dark text-white
+                    rounded-3xl
+                    p-7 w-60
+                    shadow-2xl">
+
+          <p class="text-xs uppercase
+                    tracking-widest
+                    text-white/40">
+
+            Make room
+
+          </p>
+
+          <h3 class="font-display
+                     text-3xl mt-3">
+
+            For music.
+
+          </h3>
+
+          <div class="flex justify-between
+                      mt-8 text-white/40
+                      text-xs">
+
+            <span>01 / 04</span>
+            <span>✦</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MARQUEE ================= -->
+
+  <section class="bg-dark text-white py-5 overflow-hidden">
+
+    <div class="flex gap-10
+                min-w-max
+                text-sm font-bold
+                tracking-[0.25em] uppercase">
+
+      <span>PIANO</span>
+      <span class="text-coral">✦</span>
+
+      <span>GUITAR</span>
+      <span class="text-gold">✦</span>
+
+      <span>VOCALS</span>
+      <span class="text-coral">✦</span>
+
+      <span>DRUMS</span>
+      <span class="text-gold">✦</span>
+
+      <span>MUSIC THEORY</span>
+      <span class="text-coral">✦</span>
+
+      <span>PIANO</span>
+      <span class="text-gold">✦</span>
+
+      <span>GUITAR</span>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CLASSES ================= -->
+
+  <section id="classes" class="py-28 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex flex-col
+                  md:flex-row
+                  justify-between
+                  md:items-end gap-6">
+
+        <div>
+
+          <p class="text-coral
+                    uppercase
+                    tracking-widest
+                    text-xs font-bold">
+
+            What we teach
+
+          </p>
+
+          <h2 class="font-display
+                     text-5xl sm:text-6xl
+                     mt-4 leading-none">
+
+            Your next chapter
+
+            <br>
+
+            <span class="italic text-dark/30">
+              starts here.
+            </span>
+
+          </h2>
+
+        </div>
+
+
+        <p class="max-w-md
+                  text-dark/50
+                  leading-7">
+
+          Flexible lessons, small groups and
+          one-to-one coaching designed around
+          your goals.
+
+        </p>
+
+      </div>
+
+
+      <!-- Class cards -->
+
+      <div class="grid sm:grid-cols-2
+                  lg:grid-cols-4
+                  gap-5 mt-14">
+
+
+        <!-- Piano -->
+
+        <div class="bg-white rounded-[2rem]
+                    p-7 shadow-soft
+                    hover:-translate-y-2
+                    transition">
+
+          <div class="flex justify-between
+                      items-center mb-16">
+
+            <div class="w-14 h-14
+                        rounded-2xl
+                        bg-[#F4D9CF]
+                        flex items-center
+                        justify-center
+                        text-2xl">
+
+              ♬
+
+            </div>
+
+            <span class="text-sm text-black/30">
+              01
+            </span>
+
+          </div>
+
+          <h3 class="font-display text-3xl">
+            Piano
+          </h3>
+
+          <p class="mt-3 text-sm
+                    text-black/50 leading-6">
+
+            Learn chords, melodies,
+            technique and performance.
+
+          </p>
+
+          <a href="#contact"
+             class="block mt-7
+                    text-coral font-bold text-sm">
+
+            Explore →
+
+          </a>
+
+        </div>
+
+
+        <!-- Guitar -->
+
+        <div class="bg-[#DCE8D9]
+                    rounded-[2rem]
+                    p-7
+                    hover:-translate-y-2
+                    transition">
+
+          <div class="flex justify-between
+                      items-center mb-16">
+
+            <div class="w-14 h-14
+                        rounded-2xl
+                        bg-white/70
+                        flex items-center
+                        justify-center
+                        text-2xl">
+
+              🎸
+
+            </div>
+
+            <span class="text-sm text-black/30">
+              02
+            </span>
+
+          </div>
+
+          <h3 class="font-display text-3xl">
+            Guitar
+          </h3>
+
+          <p class="mt-3 text-sm
+                    text-black/50 leading-6">
+
+            Master chords, rhythm,
+            riffs and your own style.
+
+          </p>
+
+          <a href="#contact"
+             class="block mt-7
+                    font-bold text-sm">
+
+            Explore →
+
+          </a>
+
+        </div>
+
+
+        <!-- Vocals -->
+
+        <div class="bg-[#F5E5B9]
+                    rounded-[2rem]
+                    p-7
+                    hover:-translate-y-2
+                    transition">
+
+          <div class="flex justify-between
+                      items-center mb-16">
+
+            <div class="w-14 h-14
+                        rounded-2xl
+                        bg-white/60
+                        flex items-center
+                        justify-center
+                        text-2xl">
+
+              🎤
+
+            </div>
+
+            <span class="text-sm text-black/30">
+              03
+            </span>
+
+          </div>
+
+          <h3 class="font-display text-3xl">
+            Vocals
+          </h3>
+
+          <p class="mt-3 text-sm
+                    text-black/50 leading-6">
+
+            Find your voice and
+            sing with confidence.
+
+          </p>
+
+          <a href="#contact"
+             class="block mt-7
+                    font-bold text-sm">
+
+            Explore →
+
+          </a>
+
+        </div>
+
+
+        <!-- Drums -->
+
+        <div class="bg-[#E5D9EA]
+                    rounded-[2rem]
+                    p-7
+                    hover:-translate-y-2
+                    transition">
+
+          <div class="flex justify-between
+                      items-center mb-16">
+
+            <div class="w-14 h-14
+                        rounded-2xl
+                        bg-white/70
+                        flex items-center
+                        justify-center
+                        text-2xl">
+
+              🥁
+
+            </div>
+
+            <span class="text-sm text-black/30">
+              04
+            </span>
+
+          </div>
+
+          <h3 class="font-display text-3xl">
+            Drums
+          </h3>
+
+          <p class="mt-3 text-sm
+                    text-black/50 leading-6">
+
+            Build rhythm and learn
+            to play with confidence.
+
+          </p>
+
+          <a href="#contact"
+             class="block mt-7
+                    font-bold text-sm">
+
+            Explore →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about"
+           class="bg-dark text-white
+                  py-28 px-6">
+
+    <div class="max-w-7xl mx-auto
+                grid lg:grid-cols-2
+                gap-16 items-center">
+
+      <!-- Image -->
+
+      <div class="h-[500px]
+                  rounded-[2.5rem]
+                  bg-[#B9825D]
+                  relative overflow-hidden">
+
+        <div class="absolute
+                    w-72 h-72
+                    rounded-full
+                    border-[30px]
+                    border-white/20
+                    left-1/2 top-1/2
+                    -translate-x-1/2
+                    -translate-y-1/2">
+        </div>
+
+        <div class="absolute
+                    bottom-8 left-8
+                    bg-dark/90
+                    rounded-2xl
+                    px-5 py-4
+                    text-xs
+                    uppercase
+                    tracking-widest">
+
+          Est. 2014
+
+        </div>
+
+        <div class="absolute
+                    right-8 top-8
+                    text-7xl
+                    text-white/70">
+
+          ♪
+
+        </div>
+
+      </div>
+
+
+      <!-- Text -->
+
+      <div>
+
+        <p class="text-gold
+                  text-xs
+                  uppercase
+                  tracking-widest
+                  font-bold">
+
+          More than lessons
+
+        </p>
+
+        <h2 class="font-display
+                   text-5xl sm:text-6xl
+                   leading-tight mt-5">
+
+          Music should feel
+          like
+
+          <span class="text-coral italic">
+            you.
+          </span>
+
+        </h2>
+
+        <p class="mt-7 text-lg
+                  text-white/60
+                  leading-8">
+
+          We believe learning music should
+          feel exciting, personal and creative.
+          Our teachers help you develop skills
+          while discovering your own sound.
+
+        </p>
+
+
+        <div class="grid grid-cols-2
+                    gap-8
+                    mt-10
+                    border-t
+                    border-white/10
+                    pt-8">
+
+          <div>
+
+            <div class="font-display
+                        text-4xl text-gold">
+
+              12
+
+            </div>
+
+            <p class="text-sm
+                      text-white/50 mt-1">
+
+              Studio locations
+
+            </p>
+
+          </div>
+
+          <div>
+
+            <div class="font-display
+                        text-4xl text-gold">
+
+              38
+
+            </div>
+
+            <p class="text-sm
+                      text-white/50 mt-1">
+
+              Artist teachers
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= TEACHERS ================= -->
+
+  <section id="teachers"
+           class="py-28 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <p class="text-coral
+                uppercase
+                tracking-widest
+                text-xs font-bold">
+
+        Meet your teachers
+
+      </p>
+
+      <h2 class="font-display
+                 text-5xl sm:text-6xl
+                 mt-4">
+
+        Good humans.
+
+        <br>
+
+        <span class="italic text-dark/30">
+          Great musicians.
+        </span>
+
+      </h2>
+
+
+      <div class="grid md:grid-cols-3
+                  gap-5 mt-14">
+
+
+        <!-- Teacher 1 -->
+
+        <div class="bg-white
+                    rounded-[2rem]
+                    overflow-hidden
+                    shadow-soft">
+
+          <div class="h-72
+                      bg-[#C8A78D]
+                      flex items-end
+                      justify-center">
+
+            <span class="text-[9rem]
+                         text-black/10
+                         leading-none">
+
+              ♪
+
+            </span>
+
+          </div>
+
+          <div class="p-6">
+
+            <div class="flex justify-between">
+
+              <h3 class="font-display
+                         text-2xl">
+
+                Maya Chen
+
+              </h3>
+
+              <span class="text-xs
+                           text-black/40">
+
+                PIANO
+
+              </span>
+
+            </div>
+
+            <p class="text-sm
+                      text-black/50 mt-2">
+
+              Jazz · Songwriting · Beginners
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Teacher 2 -->
+
+        <div class="bg-white
+                    rounded-[2rem]
+                    overflow-hidden
+                    shadow-soft">
+
+          <div class="h-72
+                      bg-[#9BAA88]
+                      flex items-end
+                      justify-center">
+
+            <span class="text-[9rem]
+                         text-black/10
+                         leading-none">
+
+              ♫
+
+            </span>
+
+          </div>
+
+          <div class="p-6">
+
+            <div class="flex justify-between">
+
+              <h3 class="font-display
+                         text-2xl">
+
+                Leo Martinez
+
+              </h3>
+
+              <span class="text-xs
+                           text-black/40">
+
+                GUITAR
+
+              </span>
+
+            </div>
+
+            <p class="text-sm
+                      text-black/50 mt-2">
+
+              Indie · Blues · Music Theory
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Teacher 3 -->
+
+        <div class="bg-white
+                    rounded-[2rem]
+                    overflow-hidden
+                    shadow-soft">
+
+          <div class="h-72
+                      bg-[#D7B85E]
+                      flex items-end
+                      justify-center">
+
+            <span class="text-[9rem]
+                         text-black/10
+                         leading-none">
+
+              🎤
+
+            </span>
+
+          </div>
+
+          <div class="p-6">
+
+            <div class="flex justify-between">
+
+              <h3 class="font-display
+                         text-2xl">
+
+                Nia Brooks
+
+              </h3>
+
+              <span class="text-xs
+                           text-black/40">
+
+                VOCALS
+
+              </span>
+
+            </div>
+
+            <p class="text-sm
+                      text-black/50 mt-2">
+
+              Pop · Soul · Performance
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CTA ================= -->
+
+  <section id="contact"
+           class="px-6 pb-10">
+
+    <div class="max-w-7xl mx-auto
+                bg-coral
+                rounded-[2.5rem]
+                p-8 sm:p-14
+                text-white">
+
+      <div class="grid lg:grid-cols-2
+                  gap-10
+                  items-center">
+
+        <div>
+
+          <p class="text-xs
+                    uppercase
+                    tracking-widest
+                    text-white/60
+                    font-bold">
+
+            Ready when you are
+
+          </p>
+
+          <h2 class="font-display
+                     text-5xl sm:text-6xl
+                     leading-none mt-4">
+
+            Your instrument
+            is waiting.
+
+          </h2>
+
+        </div>
+
+
+        <div class="lg:text-right">
+
+          <a
+            href="mailto:hello@sonora.com"
+            class="inline-block
+                   bg-dark
+                   text-white
+                   px-7 py-4
+                   rounded-full
+                   font-bold
+                   hover:scale-105
+                   transition">
+
+            Book Your First Class →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="px-6 py-10">
+
+    <div class="max-w-7xl mx-auto
+                border-t border-black/10
+                pt-8
+                flex flex-col
+                sm:flex-row
+                justify-between
+                gap-5
+                text-sm text-black/50">
+
+      <p>
+        © 2026 Sonora Music School
+      </p>
+
+      <div class="flex gap-6">
+
+        <a href="#" class="hover:text-black">
+          Instagram
+        </a>
+
+        <a href="#" class="hover:text-black">
+          YouTube
+        </a>
+
+        <a href="#" class="hover:text-black">
+          Privacy
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
